@@ -1,11 +1,8 @@
 package ua.edu.ucu.apps.flower;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 import ua.edu.ucu.apps.Item.Item;
-
-import jakarta.persistence.Id;
 
 import java.util.Objects;
 
@@ -18,6 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Flower extends Item {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private double sepalLength;
   private FlowerColor color;
